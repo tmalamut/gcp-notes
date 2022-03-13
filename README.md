@@ -1,9 +1,7 @@
 # gcp-notes
 
-A collection of notes for studying the Google Cloud Platform. Written in Markdown.
+A collection of notes for studying Google Cloud (from their partner learning platform). Written in Markdown.
 
-File tree:
-*insert file tree*
 
 
 
