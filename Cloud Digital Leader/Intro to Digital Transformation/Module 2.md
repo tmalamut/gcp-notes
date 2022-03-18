@@ -7,7 +7,7 @@
 * Business critical applications are often running on existing on-prem infrastructure, so transitioning them to the cloud can be a big change.
 * Most organizations want to operate a hybrid model - this means operating across multiple public cloud providers or a mixture of private on-prem and public cloud solutions. 
 * Example: Businesses can take advantage of high performance computing in a cost-effective and scalable way. With cloud computing, business can scale in the cloiud and pay for what they use when they use it. 
-* Example: Virtual Desktops (pre-configured images of operating systems and apps). Means that accessing the OS doesn't rly on the physical device running on the OS. Enables secure and scalable access to corporate resources.
+* Example: Virtual Desktops (pre-configured images of operating systems and apps). Means that accessing the OS doesn't rely on the physical device running on the OS. Enables secure and scalable access to corporate resources.
 
 ### Modernizing Business Platforms and Applications
 * Business application platforms are about enabling integration between systems and granting users the correct access privileges in an organization and beyond.
