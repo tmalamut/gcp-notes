@@ -44,6 +44,58 @@
    * At Google, a global team of more than 900 security experts monitor the system constantly. 
 
 ### Shared Responsibility Model - Part II
-* 
+* IT teams need to have a complete understanding of who can access what data.
+    * Need to define who can do what and on what cloud resource.
+* Enable multi-factor authentication to protect against phishing.
+* Can use security keys to plug in.
+* Use logging and monitoring tools, many are natively provided as part of Google Cloud services.
+* How do orgs manage a data breach:
+    * Need to know what's going on by developing situational awareness.
+    * Need to have a culture that allows team to work in stressful situations.
+        * Create an open, blameless culture.
+    * Need to maintain operational readiness. 
+
+### Identity and Access Management
+* Cloud Identity is a Google Cloud solution that helps orgs control and manage access to resources in order to maintain the security and integrity of both data and systems. 
+* An identity access management policy or IAM policy is made of three parts: who can do what, and on which resource.
+* The who part of an IAM policy can be a Google account, a Google group, a service account, or a Google workspace or Cloud Identity domain.
+* The "can do what" part is identified by IAM role.
+* Three kinds of Cloud IAM roles: primitive, predefined, and custom.
+    * Primitive roles are owner, editor, and viewer and are broad.
+        * An account admin, for instance, would apply primitive roles to a Google Cloud project, thereby affecting access to all resources in that project.
+        * If you're a viewer of a given resource, you can exame it but not change its state.
+        * If you're an editor, you can do everything a viewer can do plus change its state.
+        * If you're an owner, you can do everything an editor can do, plus manage roles and permissions on the resource.
+        * Assigning primitive roles is not the most effective approach to security.
+    * If you're not sure what permissions to grant specific users, Google Cloud services offer their own set of predefined roles that align with typical responsibilities of people using those services.
+        * Each role is a collection of permissions.
+        * The cloud service defines where those roles can be applied.
+        * Compute Engine also provides a set of predefined roles that can be applied to Compute Engine resources in a given project, given folder, or an entire org.
+        * Cloud Bigtable, a managed database service, offers roles that can be applied across an entire org, to a particular project, or even to individual big table database instances.
+    * Google Cloud recommends using a least privileged model in which each person in your org is given the minimal amount of privilege needed to do their job. 
+        * For example, maybe you want to define a role to allow some users to stop and start Compute Engine VMs, but not to reconfigure them.
+        * Orgs that use custom roles need to manage the permissions that make them up.
+        * An org can map job functions within the org to specific groups and each group can then be given specific roles for specific resources.
+
+### Resource Hierarchy
+* Another facet to controlling and managing access is tied to the resource hierarchy, or in other words, what resources users can access.
+* A project is the basis for enabling and using Google Cloud capabilities, like managing APIs, enabling billing, adding and removing collaborators, and enabling other Google or Alphabet services.
+* A resource is any Google Cloud service, like Compute Engine and BigQuery.
+    * Any resources consumed by your project, for example, VMs, Cloud Storage buckets, or BigQuery tables are connected to the project in the hierarchy.
+* Businesses usually have more than one cloud project running, so projects can be organized into folders. 
+    * A folder can contain projects, other folders, or a combination of both.
+* Projects can be grouped into a hierarchy
+    * Belong to the organization rather than the user who created them.
+    * Used for grouping Google Cloud resources.
+    * Can exist under a folder, so it can be grouped logically to match a company's actual structure. 
+* Refers to the way the IT team can organize a business's Google Cloud environment, and how that service structure maps to the org's actual structure.
+* IT teams can manage access and permissions for groups of related resources.
+* Starting from the top, everything in Google Cloud is under a domain and an organization.
+    * The domain is handled through Cloud Identity, and helps manage user profiles.
+    * The org is managed through the Cloud Console, and lets admins see and control Google Cloud resources and permissions.
+    
+
+
+   
            
          
