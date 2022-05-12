@@ -17,4 +17,3 @@
 * If you need more control over the underlying infrastructure.
 * Typical path for legacy application migrations and existing systems that require a specific OS.
 
-### More topics to be added (i.e., Machine type families)

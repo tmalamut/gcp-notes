@@ -18,4 +18,3 @@
     * Anthos is a platform specifically designed for hybrid and multi-cloud deployments. It provides a single-pane-of-glass visibility across all clusters from infrastructure through to application performance and topology. 
         * Ex: Microservices-based applications.
 
-### More topics to be added (i.e., other use cases, best practices)

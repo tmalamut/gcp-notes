@@ -17,4 +17,4 @@
 * Application security
     * Help safeguard your app by defining access rules with App Engine firewall and leverage managed SSL/TLS certificates by default on your custom domain at no additional cost.
 
-### To be added: Other use cases, best practices
+

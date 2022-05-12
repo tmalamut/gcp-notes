@@ -12,4 +12,3 @@
     * Connecting to external systems & APIs
     * Extend other cloud services with events and code
 
-### To be added: Other use cases, best practices
