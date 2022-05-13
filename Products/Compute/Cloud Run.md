@@ -13,4 +13,3 @@
 * Just need to deploy a containerized app in a programming language of your choice with HTTP/s and websocket support.
 * Ex: websites, APIs, data processing apps, webhooks.
 
-### More topics to be added (i.e., best practices, other use cases)
