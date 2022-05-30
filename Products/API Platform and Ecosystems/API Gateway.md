@@ -37,12 +37,12 @@
     | Response code   |    200    | Request successful.      |
    
    JSON object for above table:
-   ```
-{
+   
+```{
   "title" : "_book_title_",
   "author" : "_author_name_",
   "published" : "_publish_date_"
-}
-```
+}```
+
 
 
