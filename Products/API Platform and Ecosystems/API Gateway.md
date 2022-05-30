@@ -38,11 +38,14 @@
    
    JSON object for above table:
    
-```{
+   ```json
+{
   "title" : "_book_title_",
   "author" : "_author_name_",
   "published" : "_publish_date_"
-}```
+}
+```
+   
 
 
 
