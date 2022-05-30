@@ -23,17 +23,9 @@
 
 ### Use Cases
 * Example: REST API that could return info about a book
-    | Property  | Value  | Description  |
-|---|---|---|
-| URL  | https://www.mybooksapi.com/books/info  | Return the title, author, and publishing date of a book based on its International Standard Book Number (ISBN).  |
-| HTTP Verb  | GET  | Make a GET request to the API.  |
-| Response data  | {
-  "title" : "_book_title_",
-  "author" : "_author_name_",
-  "published" : "_publish_date_"
-}  | JSON object containing book details. |
+
 
     | Property      | Value | Description     |
     | :---        |    :----:   |          ---: |
-    | Header      | Title       | Here's this   |
-    | Paragraph   | Text        | And more      |
+    | URL      |    https://www.mybooksapi.com/books/info    | Return the title, author, and publishing date of a book based on its International Standard Book Number (ISBN).   |
+    | HTTP Verb   | GET        | Make a GET request to the API.      |
