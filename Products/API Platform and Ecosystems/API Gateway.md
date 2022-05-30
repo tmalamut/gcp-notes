@@ -20,17 +20,32 @@
     * Scale the service as usage increases or decreases
     * Provide the backend ops team with a way to monitor and track usage
     * Track usage to provide accurate billing info
+* Key components of an API definition:
+    * The URL, or entry point, of the backend service
+    * The data format of any data passed on a request to the API
+    * The data format of any data returned by the service in the response from the API
+    * The authentication mechanism used to control access to the service
 
 ### Use Cases
 * Example: REST API that could return info about a book
-
 
     | Property      | Value | Description     |
     | :---        |    :----:   |          ---: |
     | URL      |    https://www.mybooksapi.com/books/info    | Return the title, author, and publishing date of a book based on its International Standard Book Number (ISBN).   |
     | HTTP Verb   | GET        | Make a GET request to the API.      |
-    | Response data   |   ``` {
+    | Response data   |    **Right below table**     | JSON object containing book details.      |
+    | Response code   |    200    | Request successful.      |
+   
+   JSON object for above table:
+   ```
+{
   "title" : "_book_title_",
   "author" : "_author_name_",
   "published" : "_publish_date_"
-}```     | JSON object containing book details.      |
+}
+```
+Could make the following cURL request to this API to get info about a book:
+```
+    curl -X GET https://www.mybooksapi.com/books/info?isbn=0385504217
+```
+
