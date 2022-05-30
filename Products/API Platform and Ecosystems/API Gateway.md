@@ -32,3 +32,8 @@
   "author" : "_author_name_",
   "published" : "_publish_date_"
 }  | JSON object containing book details. |
+
+    | Property      | Value | Description     |
+    | :---        |    :----:   |          ---: |
+    | Header      | Title       | Here's this   |
+    | Paragraph   | Text        | And more      |
