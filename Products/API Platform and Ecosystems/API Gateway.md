@@ -45,8 +45,4 @@
 }
 ```
 
-Could make the following cURL request to this API to get info about a book:
-```
-    curl -X GET https://www.mybooksapi.com/books/info?isbn=0385504217
-```
 
