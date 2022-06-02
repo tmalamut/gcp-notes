@@ -26,25 +26,6 @@
     * The data format of any data returned by the service in the response from the API
     * The authentication mechanism used to control access to the service
 
-### Use Cases
-* Example: REST API that could return info about a book
-
-    | Property      | Value | Description     |
-    | :---        |    :----:   |          ---: |
-    | URL      |    https://www.mybooksapi.com/books/info    | Return the title, author, and publishing date of a book based on its International Standard Book Number (ISBN).   |
-    | HTTP Verb   | GET        | Make a GET request to the API.      |
-    | Response data   |    **Right below table**     | JSON object containing book details.      |
-    | Response code   |    200    | Request successful.      |
-   
-   JSON object for above table:
-   
-   ```json
-{
-  "title" : "_book_title_",
-  "author" : "_author_name_",
-  "published" : "_publish_date_"
-}
-```
    
 
 
