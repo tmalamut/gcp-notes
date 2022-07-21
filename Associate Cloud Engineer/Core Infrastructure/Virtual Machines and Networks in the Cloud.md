@@ -55,13 +55,13 @@
 * The job of a load balancer is to distribute user traffic across multiple instances of an app
 * By spreading the load, load balancing reduces the risk that app experiences performance issues
 * Cloud load balancing is a fully distributed software defined managed service for all your traffic
-* Can put cloud loading balancing in front of all your traffic, HTTP or HTTP(S), and other TCP and SSL traffic and UDP traffic too
+* Can put cloud loading balancing in front of all your traffic, HTTP or HTTP(S), and other  and SSL traffic and UDP traffic too
 * Provides cross region load balancing, including automatic multi-region fail over which gently moves traffic infractions if backends become unhealthy
 * Reacts quickly to changes in users, traffic, network, backend health and other conditions
 * If you need cross regional load balancing for a web app, use global HTTP load balancing
 * For secure sockets layer traffic that's not HTTP, use the global SSL proxy load balancing
-* If it's other TCP traffic that doesn't use SSL, use the global TCP proxy load balancing
-* The last two proxy services only work for specific port numbers and they only work for TCP
+* If it's other  traffic that doesn't use SSL, use the global  proxy load balancing
+* The last two proxy services only work for specific port numbers and they only work for 
 * If you want to load balancing UDP traffic or traffic on any port number, you can still balance across the Google Cloud region with the regional load balancer
 * Services are intended for traffic coming into the Google network from the internet
 * If you want to load balance traffic inside your project, use the regional internal load balancer - it accepts traffic on a Google Cloud internal IP address and load balances it across Compute Engine VMs
