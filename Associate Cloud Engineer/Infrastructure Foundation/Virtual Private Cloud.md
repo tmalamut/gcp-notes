@@ -77,7 +77,59 @@
 * Can configure multiple IP addresses representing containers or apps hosted in a VM without having to define a separate network interface
 
 ### Routes and Firewall Rules
-* Testing
+* Every network has:
+    * Routes that let instances in a network send traffic directly to each other
+    * A defaultroute that directs packets to destinations that are outside the network
+* Firewall rules must also allow the packet
+* Routes map traffic to destination networks
+    * Apply to traffic egressing a VM
+    * Forward traffic to most specific route
+    * Are created when a subnet is created
+    * Enable VMs on same network to communicate
+    * Destination is in CIDR notation
+    * Traffic is delivered only if it also matches a firewall rule
+* Firewall rules protect your VM instances from unapproved connections
+    * VPC network functions as a distributed firewall
+    * Firewall rules are applied to the network as a whole
+    * Connections are allowed or denied at the instance level
+    * Firewall rules are stateful
+    * Implied deny all ingress and allow all egress
+* Routes map traffic to destination networks
+    * direction: Inbound/outbound connections are matched against ingress/egress rules only
+    * source or destination: For the ingress direction, sources can be specified as part of the rule with IP addresses, source tags, or a source service account. For the egress direction, destinations can be specified as part of the rule with one or more ranges of IP addresses
+    * protocol and port: Any rule can be restricted to apply to specific protocols only or specific combinations of protocols and ports only
+    * action: To allow or deny packets that match the direction, protocol, port, and source or destination of the rule
+    * priority: Governs the order in which rules are evaluated; the first matching rule is applied 
+    * Rule assignment: All rules are assigned to all instances, but you can assign certain rules to certain instances only
+* Google Cloud firewall use case: Egress
+    * Conditions:
+        * Destination CIDR ranges
+        * Protocols
+        * Ports
+    * Action:
+        * Allow: Permit the matching egress connection
+        * Deny: Block the matching egress connection
+* Google Cloud firewall use case: Ingress
+    * Conditions:
+        * Source CIDR ranges
+        * Protocols
+        * Ports
+    * Action:
+        * Allow: Permit the matching ingress connection
+        * Deny: Block the matching ingress connection
+### Pricing
+* Egress or traffic coming into GCP network's is not charged, unless there is a resource, such as a load balancer that is processing egress traffic
+* Responses to request account as egress and are charged
+* Egress traffic to the same zone is not charged as long as that egress is through the internal IP address of an instance
+* Egress traffic to Google products like Youtube, Maps to a different GCP service within the same region is not charged for
+* There is a charge for egress between zones in the same region, egress within a zone, if the traffic is through the external IP address of an instance, and egress between regions
+* Compute Engine cannot determine the zone of a VM through the external IP address - this traffic is treated like egress between zones in the same region
+* Are charged for static and ephemeral external IP addresses
+* If you reserve a static external IP address and don't assign it to a resource, such as a VM instance or a forwarding rule, you are charged at a higherrate and for static and ephemeral external IP addresses that are in use
+* External IP addresses on preemptible VMs have a lower charge than for standard VM instances
+* Recommend using the GCP pricing calculator to estimate the cost of a collection of resources, because each service has its own pricing model
+* Pricing calculator is a web-based tool that you use to specify the expected consumption of certain services and resources and then it provides you with an estimated cost
+* 
 
 
 
