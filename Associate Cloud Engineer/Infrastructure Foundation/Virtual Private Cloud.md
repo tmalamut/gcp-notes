@@ -129,7 +129,7 @@
 * External IP addresses on preemptible VMs have a lower charge than for standard VM instances
 * Recommend using the GCP pricing calculator to estimate the cost of a collection of resources, because each service has its own pricing model
 * Pricing calculator is a web-based tool that you use to specify the expected consumption of certain services and resources and then it provides you with an estimated cost
-* 
+
 
 
 
