@@ -39,7 +39,40 @@
         * Deleter: Delete projects
 
 ### Roles
+* IAM basic roles apply across all Google Cloud services in a project
+* Basic roles offer fixed, coarse-grained levels of access
+    * Owner:
+        * Invite members
+        * Remove members
+        * Delete projects
+        * And anything editor can do
+    * Editor:
+        * Deploy apps
+        * Modify code
+        * Configure services
+    * Viewer
+        * Read-only access
+    * Billing Administrator
+        * Manage billing
+        * Add and remove admins
+* IAM predefined roles apply to a particular GCP service in a project
+* Predefined roles offer more fine-grained permissions on particular services
+* Predefined roles are a collection of permissions
+* Compute Engine has several predefined roles, like:
+    * Compute Admin:
+        * Full control of all Compute Engine resources
+    * Network Admin:
+        * Permissions to create, modify, and delete networking resources, except for firewall rules and SSL certificates
+    * Storage Admin:
+        * Permissions to create, modify, and delete disks, images, and snapshots
+* IAM custom roles let you define a precise set of permissions
+* A lot of companies use the least privileged model in which each person in your organization is given the minimal amount of privilege needed to do their job
+* If you want to define an instance operator role to allow some users to start and stop Compute Engine VMs but not reconfigure them, custom roles allow you to do that
+
+### Members
 * 
+
+
 
 
 
