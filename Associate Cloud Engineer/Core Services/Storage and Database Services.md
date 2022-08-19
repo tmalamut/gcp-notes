@@ -148,3 +148,62 @@
     * If your relational data workoad isn't analytics and a database with ACID properties is a requirement, the choice lies between Cloud Spanner and Cloud SQL
         * If you don't need horizontal scaling or a globally available system, Cloud SQL is a cost-effective solution
 
+### Cloud Spanner
+* Cloud Spanner combines the benefits of relational database structure with non-relational horizontal scale
+    * Scale to petabytes
+    * Strong consistency
+    * High availability
+    * Used for financial and inventory apps
+    * Monthly uptime
+        * Multi-regional: 99.999%
+        * Regional: 99.99%
+* A Cloud Spanner instance replicates data in zones which can be within one region or across several regions
+* The replication of data will be synchronized across zones using Google's global fiber network
+
+### Firestore
+* Firestore is a NoSQL document database
+    * Simplifies storing, syncing, and querying data
+    * Mobile, web, and IoT apps at global scale
+    * Live sync and offline support
+    * Security features
+    * ACID transactions
+    * Multi-region replication
+    * Powerful query engine   
+* Is the next generation of Datastore
+    * Datastore mode (new server projects)
+        * Compatible with Datastore apps
+        * Strong consistency
+        * No entity group limits
+    * Native mode (new mobile and web apps)
+        * Strongly consistent storage layer
+        * Collection and document data model
+        * Real-time updates
+        * Mobile and Web client libraries
+* If schema might change and need an adaptable database, go with Firestore
+
+### Cloud Bigtable
+* Cloud Bigtable is a NoSQL big data database service
+    * Petabyte-scale
+    * Consistent sub-10ms latency
+    * Seamless scalability for throughput
+    * Learns and adjusts to access patterns
+    * Ideal for Ad Tech, Fintech, and IoT
+    * Storage engine for ML apps
+    * Easy integration with open source big data tools
+* Stores data in massively scalable tables, each is sorted in key-value map
+* The table is composed of rows, which typically describes a single entity in columns which contain individual values for each row
+* Each row is indexed by a single row key and columns that are related to one another are typically grouped together into a column family
+* Each column is identified by a combination of the column family and a column qualifier, which is a unique name within the column family
+* Each row column intersection can contain multiple cells or versions at different time stamps providing a record of how the stored data has been altered over time
+* Tables are sparse - if a cell doesn't contain any data, it doesn't take up any space
+* Processing is handled separately from the storage
+
+### Memorystore
+* Memorystore is a fully managed Redis service
+    * In-memory data store service
+    * Focus on building great apps
+    * High availability, failover, patching, and monitoring
+    * Sub-ms latency
+    * Instances up to 300 GB
+    * Network throughput of 12 Gbps
+    * Easy Lift-and-Shift
