@@ -34,4 +34,80 @@
     * Build your own container using the open-source docker command
     * Build your own container using Cloud Build
 
+### Intro to Kubernetes
+* Popular container management and orchestration solution
+* It's a container-centric management environment
+* Automates the deployment, scaling, load balancing, logging, monitoring, and other management features of containerized apps - these are the features that are characteristic of a typical PaaS solution
+* Also has features of an IaaS, such as allowing a wide range of user preferences and config flexibility
+* Supports declarative and imperative configs, but best practice is declarative
+    * Can describe the desired state you want to achieve instead of issuing commands
+* Supports different workload types
+* Supports stateless apps such as Nginx or Apache web server, and stateful apps, where user and session data can be stored persistently
+* Supports batched jobs and daemon tasks
+* Can automatically scale in and out containerized apps based on resource utilization
+* Can specify resource request levels and resource limits for your workloads
+* Kubernetes is open source, so it supports workload portability across on-prem or multiple cloud service providers - allows Kubernetes to be deployed anywhere
+
+### Intro to Google Kubernetes Engine
+* Google Cloud's managed service offering for Kubernetes
+* Helps you deploy, manage, and scale Kubernetes environments for your containerized apps on GCP
+* Is fully managed, means you don't have to provision the underlying resources
+* Uses a container-optimized OS and these OS's are maintained by Google
+* When you use GKE, you start by directing the service to instantiate a Kubernetes system for you - this system is called a cluster
+* GKE's auto-upgrade feature can be enabled to ensure your clusters are automatically upgraded
+* The VMs that host your containers inside of a GKE cluster are called nodes
+* Enabling GKE's auto repair feature ensures that the services automatically repairs unhealthy nodes for you
+* GKE supports scaling the cluster itself, like how Kubernetes supports scaling workloads 
+
+### Computing Options Detail
+* Compute Engine
+    * Fully customizable VMs
+    * Persistent disks and optional local SSDs
+    * Global load balancing and autoscaling
+    * Use cases:
+        * Complete control over the OS and virtual hardware
+        * Well suited for lift-and-shift migrations to the cloud
+        * Most flexible compute solution, often used when a managed solution is too restrictive
+* App Engine
+    * Provides a fully managed, code-first platform
+    * Streamlines app deployment and scalability
+    * Provides support for popular programming languages and app runtimes
+    * Supports integrated monitoring, logging, and diagnostics
+    * Simplifies version control, canary testing, and rollbacks
+    * Use cases:
+        * Websites
+        * Mobile app and gaming backends
+        * RESTful APIs
+* Google Kubernetes Engine
+    * Fully managed Kubernetes platform
+    * Supports cluster scaling, persistent disks, automated upgrades, and auto node repairs
+    * Built-in integration with Google Cloud services
+    * Portability across multiple environments
+        * Hybrid computing
+        * Multi-cloud computing
+    * Use cases:
+        * Containerized apps
+        * Cloud-native distributed systems
+        * Hybrid apps
+* Cloud Run
+    * Enables stateless containers
+    * Abstracts away infrastructure management
+    * Automatically scales up and down
+    * Open API and runtime environment
+    * Use cases:
+        * Deploy stateless containers that listen for requests or events
+        * Build apps in any language with any frameworks and tools
+* Cloud Functions
+    * Event-driven, serverless compute service
+    * Automatic scaling with highly available and fault-tolerant design
+    * Charges apply only when your code runs
+    * Triggered based on events in Google Cloud services, HTTP endpoints, and Firebase
+    * Use cases:
+        * Supporting microservice architecture
+        * Serverless app backends
+            * Mobile and IoT backends
+            * Integrate with third-party services and APIs
+        * Intelligent apps
+            * Virtual assistant and chat bots
+            * Video and image analysis
 

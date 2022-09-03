@@ -5,7 +5,7 @@
 * A configurable system lets you install your favorite runtime, web server, database or middleware. Configure the underlying system resources such as disk, space, disk IO, or networking and build as you like
 * Flexibility comes with a cost - the smallest unit of compute is an app with its VM
 * As demand increases, you have to copy an entire VM and boot the guest OS for each instance of your app
-* With AppEngine, you get access to programming services. You only need to write your code in self contained workloads that use these services and include any dependent libraries - means that as demand increases, the platform scales your app seamlessly and independently by workload and infrastructure
+* With App Engine, you get access to programming services. You only need to write your code in self contained workloads that use these services and include any dependent libraries - means that as demand increases, the platform scales your app seamlessly and independently by workload and infrastructure
 * A container is an invisible box around your code and its dependencies with limited access to its own partition of the file system and hardware
 * Only requires a few system calls to create
 * All that's needed on each host is an OS kernel that supports containers and a container runtime
