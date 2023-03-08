@@ -90,12 +90,62 @@
         * Admin tasks should be repeatable processes, not one-off manual tasks
         * Admin tasks shouldn't be a part of the app
 
-
-
-
-
-
-
-
-
 ### REST and APIs
+* A good microservice design is loosely coupled
+    * If microservices aren't loosely coupled, you'll end up with a really complicated monolith
+* Clients shouldn't need to know too many details of services they use
+* Services communicate via HTTPS using text-based payloads
+    * Client makes GET, POST, PUT, or DELETE request
+    * Body of the request is formatted as JSON or XML
+    * Results returned as JSON, XML, or HTML
+* Services should add functionality without breaking existing clients
+    * Add, but don't remove, items from responses
+* REST stands for Representational State Transfer
+* Protocol independent
+    * HTTP is most common
+    * Others possible like gRPC
+* Service endpoints supporting REST are called RESTful
+* Client and Server communicate with Request - Response processing
+* RESTful services communicate over the web using HTTP(S)
+* URIs (or endpoints) identify resources
+    * Responses return an immutable representation of the resource information
+* REST applications provide consistent, uniform interfaces
+    * Representation can have links to additional resources
+* Caching of immutable representations is appropriate
+* Resource is an abstract notion of information
+* Representation is a copy of the resource information
+    * Representations can be single items or a collection of items
+* Clients access services using HTTP requests
+* VERB: GET, PUT, POST, DELETE
+* URI: Uniform Resource Identifier (endpoint)
+* Request Header: metadata about the message
+* Request Body: (Optional) Request state
+* 200 code for success, 400 code for client error, 500 code for server error
+* Important to design consistent APIs for services
+* Each Google Cloud service exposes a REST API
+    * Functions are in the form: service.collection.verb
+    * Parameters are passed either in the URL or in the request body in JSON format
+* For example, the Compute Engine API has:
+    * A service endpoint at: https://compute.googleapis.com
+    * Collections include: instances, instanceGroups, instanceTemplates, etc
+    * Verbs include insert, list, get, etc
+    * To see all your instances, make a GET request to:
+        * https://compute.googleapis.com/compute/v1/projects/{project}/zones/{zone}/instances
+* OpenAPI is an industry standard for exposing APIs to clients
+    * Standard interface description format for REST APIs
+        * Language independent
+        * Open-source (based on Swagger)
+    * Allows tools and humans to understand how to use a service without needing its source code
+* gRPC is a lightweight protocol for fast, binary communication between services or devices
+    * Developed at Google
+        * Supports many languages
+    * Supported by Google services
+        * Global load balancer (HTTP/2)
+        * Cloud Endpoints
+        * Can expose gRPC services using an Envoy Proxy in GKE
+* Google Cloud provides two tools, Cloud Endpoints and Apigee, for managing APIs
+    * Both provide tools for:
+        * User authentication
+        * Monitoring
+        * Securing APIs
+        * Etc.
