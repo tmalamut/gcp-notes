@@ -34,3 +34,8 @@
     * Can also move your VM into a different zone, take a snapshot of the VMs persistent disk, export the system image or reconfig metadata
     * Some actions require you to stop your VM, like if youwant ot upgrade your machine by adding more CPU
 * Can use patch management to apply OS system patches across a set of instances
+
+
+### Test
+* Typing here
+* 
